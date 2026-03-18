@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Aluno — Mr. Dave Idiomas</title>
+    <!-- WP: Substituir por wp_head() e enqueue_scripts -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="area-aluno.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+</head>
+<body class="area-aluno-body">
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5512988336873?text=Olá!%20Sou%20aluno%20e%20preciso%20de%20ajuda" class="whatsapp-float" target="_blank" aria-label="Contato WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor">
+            <path d="M16 0C7.164 0 0 7.163 0 16c0 2.816.736 5.464 2.025 7.76L0 32l8.448-2.016A15.923 15.923 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333c-2.547 0-4.96-.707-7.04-1.92l-.507-.293-5.227 1.253 1.28-4.96-.32-.533A13.28 13.28 0 012.667 16c0-7.36 5.973-13.333 13.333-13.333S29.333 8.64 29.333 16 23.36 29.333 16 29.333zm7.307-9.653c-.4-.2-2.373-1.173-2.747-1.307-.373-.133-.64-.2-.907.2-.267.4-1.04 1.307-1.28 1.573-.24.267-.48.293-.88.093-.4-.2-1.693-.627-3.227-2-.12-.107-2.293-2.587-2.533-2.987-.24-.4-.027-.613.173-.813.187-.187.4-.48.6-.72.2-.24.267-.4.4-.667.133-.267.067-.493-.033-.693-.1-.2-.907-2.187-1.24-2.987-.32-.773-.653-.667-.907-.68-.24-.013-.507-.013-.773-.013-.267 0-.693.1-1.067.493-.373.4-1.427 1.4-1.427 3.413s1.467 3.96 1.667 4.227c.2.267 2.827 4.32 6.853 6.053.96.413 1.707.667 2.293.853.96.307 1.84.267 2.533.16.773-.12 2.373-.973 2.707-1.907.333-.933.333-1.733.24-1.907-.093-.173-.36-.28-.76-.48z"/>
+        </svg>
+        <span class="whatsapp-pulse"></span>
+    </a>
+
+    <!-- TELA DE LOGIN (mostrada antes do dashboard) -->
+    <div class="login-screen" id="loginScreen">
+        <div class="login-box">
+            <div class="logo" style="justify-content:center; margin-bottom:2rem; font-size:1.6rem">
+                Mr. <strong style="color:var(--color-primary-light)">Dave</strong> Idiomas
+            </div>
+            <h2 class="login-title">Área do Aluno</h2>
+            <p class="login-subtitle">Entre com seu e-mail e senha para acessar seus cursos</p>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">E-mail</label>
+                    <input type="email" id="loginEmail" placeholder="seu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginSenha">Senha</label>
+                    <input type="password" id="loginSenha" placeholder="••••••••" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> <span>Lembrar de mim</span>
+                    </label>
+                    <a href="#" class="link-forgot">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="btn-primary btn-large btn-full">Entrar</button>
+            </form>
+            <p class="login-back"><a href="index.html">← Voltar para o site</a></p>
+        </div>
+    </div>
+
+    <!-- DASHBOARD (oculto até o login) -->
+    <div class="dashboard-wrapper" id="dashboardWrapper" style="display:none">
+
+        <!-- Header do Dashboard -->
+        <header class="header header-dashboard">
+            <nav class="nav-container">
+                <a href="index.html" class="logo" style="text-decoration:none">
+                    Mr. <strong style="color:var(--color-primary-light)">Dave</strong> Idiomas
+                </a>
+                <div class="nav-user">
+                    <span class="user-greeting">Olá, <strong id="userName">Aluno</strong></span>
+                    <span class="curso-badge-header" id="cursoHeader">USpeaK</span>
+                    <button class="btn-logout" id="logoutBtn">Sair</button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Alerta Financeiro (visível se houver débito) -->
+        <div class="alerta-financeiro" id="alertaFinanceiro" style="display:none">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <span>Há uma pendência financeira em aberto na sua conta.</span>
+            <a href="#" class="alerta-btn" id="alertaBtn" data-section="financeiro">Regularizar agora</a>
+        </div>
+
+        <!-- Layout principal -->
+        <div class="dashboard-layout">
+
+            <!-- Sidebar -->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <span class="sidebar-curso-badge" id="sidebarCursoBadge">USpeaK — Inglês</span>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <!-- SALA DE AULA -->
+                    <div class="sidebar-group">
+                        <button class="sidebar-group-btn active" data-group="sala">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                            Sala de Aula
+                            <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="sidebar-submenu open" id="group-sala">
+                            <a href="#" class="sidebar-link active" data-section="cursos">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                                Cursos
+                            </a>
+                            <a href="#" class="sidebar-link" data-section="material-curso">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                Material do Curso
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- AVALIAÇÃO -->
+                    <div class="sidebar-group">
+                        <button class="sidebar-group-btn" data-group="avaliacao">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            Avaliação
+                            <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="sidebar-submenu" id="group-avaliacao">
+                            <a href="#" class="sidebar-link" data-section="atividades">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+                                Atividades
+                            </a>
+                            <a href="#" class="sidebar-link" data-section="notas">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                                Notas
+                            </a>
+                            <a href="#" class="sidebar-link" data-section="frequencia">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                Frequência
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- FINANCEIRO -->
+                    <a href="#" class="sidebar-link sidebar-link-root" data-section="financeiro">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                        Financeiro
+                        <span class="badge-alerta" id="badgeFinanceiro" style="display:none">!</span>
+                    </a>
+
+                    <!-- SUPORTE -->
+                    <a href="index.html#contato" class="sidebar-link sidebar-link-root">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                        Suporte
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="main-content" id="mainContent">
+
+                <!-- ========== SEÇÃO: CURSOS ========== -->
+                <section class="content-section active" id="section-cursos">
+                    <div class="content-header">
+                        <h1>Sala de Aula</h1>
+                        <p class="content-subtitle">Selecione uma aula para assistir</p>
+                    </div>
+
+                    <!-- Lista de Aulas -->
+                    <div class="aulas-list" id="aulasList">
+                        <!-- Aulas geradas dinamicamente via JS -->
+                    </div>
+                </section>
+
+                <!-- ========== SEÇÃO: VIDEOPAGE ========== -->
+                <section class="content-section" id="section-videopage">
+                    <div class="content-header videopage-header">
+                        <button class="btn-back" id="btnVoltarAulas">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"/></svg>
+                            Voltar às aulas
+                        </button>
+                        <h1 id="videoTitle">Aula 1 — Introdução</h1>
+                    </div>
+
+                    <!-- Player placeholder -->
+                    <div class="video-player-placeholder">
+                        <div class="video-placeholder-inner">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" opacity="0.4">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/>
+                            </svg>
+                            <p>Vídeo da aula será exibido aqui</p>
+                            <span>Embed do player (YouTube, Vimeo, etc.)</span>
+                        </div>
+                        <!-- WP: substituir por iframe do player real -->
+                        <!-- <iframe src="URL_DO_VIDEO" frameborder="0" allowfullscreen></iframe> -->
+                    </div>
+
+                    <!-- Material da Aula com TTS -->
+                    <div class="material-aula-box">
+                        <div class="material-header">
+                            <h3>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                Material desta Aula
+                            </h3>
+                            <div class="tts-controls">
+                                <span class="tts-label">Text-to-Speech:</span>
+                                <select id="ttsVoz" class="tts-select">
+                                    <option value="en-US">🇺🇸 EN / US</option>
+                                    <option value="en-GB">🇬🇧 EN / UK</option>
+                                    <option value="es-ES">🇪🇸 ES / Spain</option>
+                                    <option value="es-MX">🇲🇽 ES / México</option>
+                                </select>
+                                <button class="btn-tts" id="btnTtsAula" title="Ouvir material">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
+                                    Ouvir
+                                </button>
+                                <button class="btn-tts-stop" id="btnTtsStop" title="Parar" style="display:none">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12"/></svg>
+                                    Parar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="material-readonly" id="materialAulaTexto" readonly>
+                            <p>Este é o material de apoio da aula. O conteúdo específico de cada aula será carregado aqui pelo sistema de gerenciamento de conteúdo (CMS / WordPress).</p>
+                            <p>O texto pode incluir vocabulário, exercícios, transcrições, notas gramaticais e recursos adicionais relacionados ao tema da aula.</p>
+                            <!-- WP: conteúdo dinâmico via the_content() ou ACF -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== SEÇÃO: MATERIAL DO CURSO ========== -->
+                <section class="content-section" id="section-material-curso">
+                    <div class="content-header">
+                        <h1>Material do Curso</h1>
+                        <p class="content-subtitle">Conteúdo de apoio geral do seu curso</p>
+                    </div>
+
+                    <div class="material-aula-box">
+                        <div class="material-header">
+                            <h3>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+                                Apostila Geral do Curso
+                            </h3>
+                            <div class="tts-controls">
+                                <span class="tts-label">Text-to-Speech:</span>
+                                <select id="ttsVozCurso" class="tts-select">
+                                    <option value="en-US">🇺🇸 EN / US</option>
+                                    <option value="en-GB">🇬🇧 EN / UK</option>
+                                    <option value="es-ES">🇪🇸 ES / Spain</option>
+                                    <option value="es-MX">🇲🇽 ES / México</option>
+                                </select>
+                                <button class="btn-tts" id="btnTtsCurso" title="Ouvir material">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
+                                    Ouvir
+                                </button>
+                                <button class="btn-tts-stop" id="btnTtsStopCurso" title="Parar" style="display:none">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12"/></svg>
+                                    Parar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="material-readonly" id="materialCursoTexto">
+                            <p>Este é o material geral do curso. Aqui você encontra o conteúdo completo da apostila, disponível para leitura diretamente na plataforma.</p>
+                            <p><strong>Unit 1 — Greetings and Introductions</strong></p>
+                            <p>In this unit, you will learn how to introduce yourself, greet people formally and informally, and ask basic questions about others. Key vocabulary includes: Hello, Hi, Good morning, Good afternoon, Good evening, Nice to meet you, What's your name? Where are you from?</p>
+                            <p><strong>Unit 2 — Daily Routines</strong></p>
+                            <p>We explore vocabulary and structures related to everyday activities. You will practice describing what you do in the morning, afternoon, and evening using simple present tense.</p>
+                            <!-- WP: conteúdo dinâmico via the_content() ou ACF -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== SEÇÃO: ATIVIDADES ========== -->
+                <section class="content-section" id="section-atividades">
+                    <div class="content-header">
+                        <h1>Atividades</h1>
+                        <p class="content-subtitle">Exercícios e tarefas do seu curso</p>
+                    </div>
+                    <div class="placeholder-box">
+                        <div class="placeholder-icon">📝</div>
+                        <h3>Atividades — Em breve</h3>
+                        <p>As atividades e exercícios do seu curso aparecerão aqui. Fique de olho nas novidades!</p>
+                        <!-- WP: integração com plugin de quiz/atividades (LearnDash, LifterLMS, etc.) -->
+                    </div>
+                </section>
+
+                <!-- ========== SEÇÃO: NOTAS ========== -->
+                <section class="content-section" id="section-notas">
+                    <div class="content-header">
+                        <h1>Notas</h1>
+                        <p class="content-subtitle">Seu desempenho nas avaliações</p>
+                    </div>
+                    <div class="placeholder-box">
+                        <div class="placeholder-icon">📊</div>
+                        <h3>Notas — Em breve</h3>
+                        <p>Suas notas e resultados das avaliações serão exibidos aqui assim que disponíveis.</p>
+                        <!-- WP: integração com sistema de notas -->
+                    </div>
+                </section>
+
+                <!-- ========== SEÇÃO: FREQUÊNCIA ========== -->
+                <section class="content-section" id="section-frequencia">
+                    <div class="content-header">
+                        <h1>Frequência</h1>
+                        <p class="content-subtitle">Registro de presença nas aulas</p>
+                    </div>
+                    <div class="placeholder-box">
+                        <div class="placeholder-icon">📅</div>
+                        <h3>Frequência — Em breve</h3>
+                        <p>O histórico de presença nas suas aulas aparecerá aqui em breve.</p>
+                        <!-- WP: integração com registro de presença -->
+                    </div>
+                </section>
+
+                <!-- ========== SEÇÃO: FINANCEIRO ========== -->
+                <section class="content-section" id="section-financeiro">
+                    <div class="content-header">
+                        <h1>Financeiro</h1>
+                        <p class="content-subtitle">Status da sua conta</p>
+                    </div>
+
+                    <div class="financeiro-status" id="financeiroStatus">
+                        <!-- Status dinâmico (em dia ou com débito) gerado via JS -->
+                    </div>
+
+                    <div class="financeiro-historico">
+                        <h3>Histórico de Pagamentos</h3>
+                        <div class="historico-table-wrap">
+                            <table class="historico-table">
+                                <thead>
+                                    <tr>
+                                        <th>Mês de Referência</th>
+                                        <th>Vencimento</th>
+                                        <th>Valor</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="historicoBody">
+                                    <!-- WP: dados via API / banco de dados -->
+                                    <tr>
+                                        <td>Fevereiro 2026</td>
+                                        <td>05/02/2026</td>
+                                        <td>R$ 159,99</td>
+                                        <td><span class="status-pago">Pago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Janeiro 2026</td>
+                                        <td>05/01/2026</td>
+                                        <td>R$ 159,99</td>
+                                        <td><span class="status-pago">Pago</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dezembro 2025</td>
+                                        <td>05/12/2025</td>
+                                        <td>R$ 159,99</td>
+                                        <td><span class="status-pago">Pago</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+            </main><!-- /main-content -->
+        </div><!-- /dashboard-layout -->
+    </div><!-- /dashboard-wrapper -->
+
+    <!-- WP: Substituir por wp_footer() -->
+    <script src="area-aluno.js"></script>
+</body>
+</html>

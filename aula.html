@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo 04 · Lección 14 — El cine y la música: Gustos culturales y opiniones | Aquí Tú Hablas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="aula.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="aula-body">
+
+<header class="header header-aula">
+    <nav class="nav-container">
+        <a href="area-aluno.html" class="logo" style="text-decoration:none">
+            Mr. <strong>Dave</strong> Idiomas
+        </a>
+        <div class="aula-breadcrumb">
+            <a href="#">Aquí Tú Hablas</a>
+            <span>/</span>
+            <span>Modulo 04 · Lección 14</span>
+        </div>
+        <div class="aula-nav-actions">
+
+            <span class="aula-nav-label">Lição 14</span>
+        </div>
+    </nav>
+</header>
+
+<div class="tts-controls-bar" id="ttsControlsBar">
+    <div class="tts-controls-inner">
+        <button class="tts-toggle-panel" id="ttsTogglePanel" title="Configurações de voz">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/><path d="M19.07 4.93a10 10 0 010 14.14"/></svg>
+            Configurações
+        </button>
+        <div class="tts-panel" id="ttsPanel">
+            <div class="tts-control-group">
+                <label>Idioma</label>
+                <select id="ttsLang">
+                    <option value="es-ES">ES / ESP</option>
+                    <option value="es-MX">ES / MEX</option>
+                </select>
+            </div>
+            <div class="tts-control-group">
+                <label>Voz Padrão</label>
+                <select id="ttsGender">
+                    <option value="male" selected>👨 Masculina</option>
+                    <option value="female">👩 Feminina</option>
+                </select>
+            </div>
+            <div class="tts-control-group">
+                <label>Velocidade <span id="rateVal">1.0</span>x</label>
+                <input type="range" id="ttsRate" min="0.5" max="2" step="0.1" value="1">
+            </div>
+            <div class="tts-control-group">
+                <label>Tom <span id="pitchVal">1.0</span></label>
+                <input type="range" id="ttsPitch" min="0.5" max="2" step="0.1" value="1">
+            </div>
+            <div class="tts-control-group">
+                <label>Delay <span id="delayVal">0</span>ms</label>
+                <input type="range" id="ttsDelay" min="0" max="1000" step="50" value="0">
+            </div>
+        </div>
+        <div class="tts-status" id="ttsStatus">Pronto</div>
+        <button class="tts-stop-btn" id="ttsStopAll" title="Parar tudo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+        </button>
+    </div>
+</div>
+
+<main class="aula-main" id="aulaMain">
+
+    <div class="lesson-header-block">
+        <div class="lesson-meta-tags">
+            <span class="tag tag-module">Modulo 04</span>
+            <span class="tag tag-lesson">Lección 14</span>
+        </div>
+        <h1 class="lesson-title">El cine y la música: </h1>
+        <p class="lesson-subtitle">Gustos culturales y opiniones</p>
+        <div class="lesson-objectives">
+            <h3>Introducción</h3>
+            <ul>
+                <li>En esta lección vamos a hablar sobre dos formas muy populares de entretenimiento: el cine y la música. Muchas personas disfrutan ver películas o escuchar canciones en su tiempo libre, y estos temas son muy comunes en conversaciones con amigos o familiares.</li>
+                <li>Durante la clase aprenderás vocabulario relacionado con películas, actores, canciones y conciertos, y también practicarás expresiones para decir lo que te gusta, lo que prefieres y lo que piensas.</li>
+                <li>Además, vamos a leer textos sobre el cine y la música en la cultura latinoamericana, y hablaremos sobre cómo estas expresiones artísticas forman parte de nuestra vida y de nuestros recuerdos.</li>
+                <li>Al final de la lección, podrás hablar sobre tus gustos culturales, expresar opiniones y comparar tus preferencias con las de otras personas.</li>
+            </ul>
+        </div>
+    </div>
+
+  <div class="lesson-objectives">
+    <h3>Al finalizar esta lección, se espera que tú:</h3>
+          <ul>
+              <li>✅ hables sobre tus gustos de cine y música;</li>
+			  <li>✅ uses vocabulario relacionado con películas y canciones;</li>
+			  <li>✅ expreses tu opinión usando frases como “creo que y en mi opinión”;</li>
+			  <li>✅ compares preferencias usando expresiones como “más… que”;</li>
+			  <li>✅ participes en conversaciones sobre entretenimiento y cultura.</li>
+		      <li>&nbsp;</li>
+			  <li><strong>¿Todo listo para la clase? ¡Vamos!</strong></li>
+          </ul>
+      </div>
+	<div>
+		<p><span></span></p>
+	</div>
+  <section class="lesson-section" id="section-exec1" data-section="Ejercicios">
+
+  </section>
+
+    <section class="lesson-section" id="section-opening" data-section="opening">
+        <div class="section-label">
+            <span>Responde en tu cuaderno 📝</span>
+        </div>
+  <div class="lesson-objectives">
+          <ul>
+              <li>¿Te gusta más ver películas o escuchar música en tu tiempo libre? ¿Por qué?</li>
+			  <li>¿Cuál fue la última película que viste o la última canción que escuchaste?</li>
+			  <li>¿Prefieres ir al cine o escuchar música en casa?</li>
+          </ul>
+      </div>
+	</section>
+	
+<section class="lesson-section" id="section-audio1" data-section="audio1">
+        <div class="section-label">
+            <span>Apertura 📖</span>
+        </div>
+        <h2 class="section-title-lesson">El cine y la música: Gustos culturales y opiniones</h2>
+
+        <div class="audio-block" data-block-id="audio1">
+            <div class="audio-block-label">Áudio 01: Daniel</div>
+            <div class="audio-block-content">
+			<p>En mi tiempo libre me gusta mucho ver películas y escuchar música. Normalmente veo películas los fines de semana. A veces voy al cine con mis amigos, pero muchas veces prefiero ver películas en casa porque es más cómodo. Me gustan las películas de acción y las comedias porque son muy divertidas. También escucho música todos los días. Escucho música cuando estudio, cuando trabajo y cuando voy al gimnasio. Mi música favorita es el pop y la música latina, pero a veces también escucho rock. Para mí, el cine y la música son muy importantes porque me ayudan a relajarme y a pasar un buen momento.</p>
+            </div>
+            <button class="btn-play-block" data-block="audio1" aria-label="Ouvir texto">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Ouvir</span>
+            </button>
+        </div>
+    </section>
+	<!--KEYWORD-->
+	<section class="lesson-section" id="section-keywords" data-section="keywords">
+        <div class="section-label">
+            <span class="section-icon">Vocabulario 📚</span>
+        </div>
+        <h2 class="section-title-lesson">Cine y Música</h2>
+        <p class="section-intro">🔊 Áudio 02: Cine</p>
+
+        <div class="keywords-grid">
+            <div class="keyword-card" data-word="la-película" data-translation="filme">
+                <span class="kw-word">la película</span>
+                <span class="kw-translation">filme</span>
+                <span class="kw-example">La película que vimos ayer en casa fue muy interesante y la historia me gustó mucho.</span>
+                <button class="kw-listen" aria-label="ouvir la-película">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+                </button>
+            </div>
+			
+			<div class="keyword-card" data-word="el-actor-y-la-actriz" data-translation="ator">
+	<span class="kw-word">el actor / la actriz</span>
+	<span class="kw-translation">ator / atriz</span>
+	<span class="kw-example">El actor principal de la película es muy famoso y trabaja en muchas películas de acción.</span>
+	<button class="kw-listen" aria-label="ouvir el-actor-y-la-actriz">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="el-cine" data-translation="cinema">
+	<span class="kw-word">el cine</span>
+	<span class="kw-translation">cinema</span>
+	<span class="kw-example">Me gusta ir al cine con mis amigos porque la pantalla es grande y el sonido es mejor.</span>
+	<button class="kw-listen" aria-label="ouvir el-cine">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="la-escena" data-translation="cena">
+	<span class="kw-word">la escena</span>
+	<span class="kw-translation">cena</span>
+	<span class="kw-example">Mi escena favorita de esa película es la escena final, cuando el héroe gana la batalla.</span>
+	<button class="kw-listen" aria-label="ouvir la-escena">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="el-director" data-translation="diretor">
+	<span class="kw-word">el director</span>
+	<span class="kw-translation">diretor</span>
+	<span class="kw-example">El director de la película hizo un trabajo excelente y la historia es muy emocionante.</span>
+	<button class="kw-listen" aria-label="ouvir el-director">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="los-efectos-especiales" data-translation="efeitos-especiais">
+	<span class="kw-word">los efectos especiales</span>
+	<span class="kw-translation">efeitos especiais</span>
+	<span class="kw-example">Los efectos especiales de la película son increíbles y algunas escenas parecen muy reales.</span>
+	<button class="kw-listen" aria-label="ouvir los-efectos-especiales">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="la-comedia" data-translation="comédia">
+	<span class="kw-word">la comedia</span>
+	<span class="kw-translation">comédia</span>
+	<span class="kw-example">Me gustan las comedias porque son divertidas y siempre me hacen reír mucho.</span>
+	<button class="kw-listen" aria-label="ouvir la-comedia">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="la-película-de-acción" data-translation="filme-de-ação">
+	<span class="kw-word">la película de acción</span>
+	<span class="kw-translation">filme de ação</span>
+	<span class="kw-example">A mi hermano le gustan las películas de acción porque tienen muchas aventuras y escenas emocionantes.</span>
+	<button class="kw-listen" aria-label="ouvir la-película-de-acción">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="la-película-de-terror" data-translation="filme-de-terror">
+	<span class="kw-word">la película de terror</span>
+	<span class="kw-translation">filme de terror</span>
+	<span class="kw-example">No me gustan las películas de terror porque algunas escenas dan mucho miedo.</span>
+	<button class="kw-listen" aria-label="ouvir la-película-de-terror">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="la-película-romántica" data-translation="filme-romântico">
+	<span class="kw-word">la película romántica</span>
+	<span class="kw-translation">filme romântico</span>
+	<span class="kw-example">A mi madre le gustan las películas románticas porque las historias de amor son muy bonitas.</span>
+	<button class="kw-listen" aria-label="ouvir la-película-romántica">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+        </div>
+		
+		
+    </section>
+	
+<section class="lesson-section" id="section-keywords2" data-section="keywords">
+        <p class="section-intro">🔊 Áudio 03: Música</p>
+
+        <div class="keywords-grid">
+<div class="keyword-card" data-word="la-canción" data-translation="música">
+	<span class="kw-word">la canción</span>
+	<span class="kw-translation">música</span>
+	<span class="kw-example">La canción que escuché ayer en la radio tiene un ritmo muy bueno y ahora la escucho todos los días.</span>
+	<button class="kw-listen" aria-label="ouvir la-canción">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="la-banda-y-el-grupo" data-translation="banda">
+	<span class="kw-word">la banda / el grupo</span>
+	<span class="kw-translation">banda</span>
+	<span class="kw-example">La banda que escucho con más frecuencia es muy famosa y tiene muchos fans en diferentes países.</span>
+	<button class="kw-listen" aria-label="ouvir la-banda-y-el-grupo">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="cantante" data-translation="vocalista">
+	<span class="kw-word">el cantante / la cantante</span>
+	<span class="kw-translation">vocalista</span>
+	<span class="kw-example">La cantante de esa banda tiene una voz muy bonita y canta canciones muy emocionantes.</span>
+	<button class="kw-listen" aria-label="ouvir cantante">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="el-concierto" data-translation="show">
+	<span class="kw-word">el concierto</span>
+	<span class="kw-translation">show</span>
+	<span class="kw-example">El año pasado fui a un concierto con mis amigos y fue una experiencia muy divertida.</span>
+	<button class="kw-listen" aria-label="ouvir el-concierto">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="ritmo" data-translation="ritmo">
+	<span class="kw-word">el ritmo</span>
+	<span class="kw-translation">ritmo</span>
+	<span class="kw-example">Me gusta esta canción porque el ritmo es muy alegre y me dan ganas de bailar.</span>
+	<button class="kw-listen" aria-label="ouvir ritmo">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="la-letra" data-translation="letra">
+	<span class="kw-word">la letra</span>
+	<span class="kw-translation">letra</span>
+	<span class="kw-example">La letra de esta canción es muy interesante y habla sobre la vida y las relaciones.</span>
+	<button class="kw-listen" aria-label="ouvir la-letra">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="el-álbum" data-translation="album">
+	<span class="kw-word">el álbum</span>
+	<span class="kw-translation">album / disco</span>
+	<span class="kw-example">El nuevo álbum de mi banda favorita tiene muchas canciones buenas y un estilo diferente.</span>
+	<button class="kw-listen" aria-label="ouvir el-álbum">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+
+<div class="keyword-card" data-word="escuchar-música" data-translation="escutar-música">
+	<span class="kw-word">escuchar música</span>
+	<span class="kw-translation">escutar / ouvir música</span>
+	<span class="kw-example">Me gusta escuchar música cuando estudio o cuando camino por la ciudad.</span>
+	<button class="kw-listen" aria-label="ouvir escuchar-música">
+		<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
+	</button>
+</div>
+        </div>
+    </section>
+	
+	<section class="lesson-section" id="section-grammar" data-section="grammar">
+
+        <div class="audio-block" data-block-id="expresiones">
+            <div class="audio-block-label">Expresiones para opinar</div>
+            <div class="audio-block-content">
+                <div class="examples-list">
+                    <div class="example-item hoverable" data-speak="me gusta mucho o no me gusta mucho">Me gusta mucho… / No me gusta mucho…</div>
+                    <div class="example-item hoverable" data-speak="prefiero">Prefiero…</div>
+                    <div class="example-item hoverable" data-speak="creo que">Creo que…</div>
+                    <div class="example-item hoverable" data-speak="pienso que">Pienso que…</div>
+                    <div class="example-item hoverable" data-speak="en mi opinión">En mi opinión…</div>
+                    <div class="example-item hoverable" data-speak="para mí">Para mí…</div>
+                </div>
+            </div>
+            <button class="btn-play-block" data-block="expresiones" aria-label="Ouvir exemplos">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span>Ouvir</span>
+            </button>
+        </div>
+	</section>
+	
+	<section class="lesson-section" id="section-dialogue1" data-section="dialogue1">
+        <h2 class="section-title-lesson">Mini-diálogos: Cine y música</h2>
+
+        <div class="audio-block" data-block-id="dialogue1">
+            <div class="audio-block-label">Áudio 04: Diálogo</div>
+            <div class="audio-block-content">
+                <div class="dialogue-block dialogue-styled">
+                    <div class="dialogue-line dl-lucas"><span class="speaker sp-lucas">Lucas:</span> ¿Te gusta esta película?</div>
+                    <div class="dialogue-line dl-carol"><span class="speaker sp-carol">Carol:</span> Sí, me gusta mucho. La historia es muy interesante y los actores trabajan muy bien.</div>
+                    <div class="dialogue-line dl-lucas"><span class="speaker sp-lucas">Lucas:</span> ¿Te gustan las películas de terror?</div>
+                    <div class="dialogue-line dl-carol"><span class="speaker sp-carol">Carol:</span> No, no me gustan mucho. Algunas escenas son muy fuertes y me dan miedo.</div>
+                    <div class="dialogue-line dl-lucas"><span class="speaker sp-lucas">Lucas:</span> ¿Prefieres ver películas en casa o en el cine?</div>
+                    <div class="dialogue-line dl-carol"><span class="speaker sp-carol">Carol:</span> Prefiero ir al cine porque la pantalla es grande y el sonido es mejor.</div>
+                    <div class="dialogue-line dl-lucas"><span class="speaker sp-lucas">Lucas:</span> ¿Qué piensas de los efectos especiales de esta película?</div>
+                    <div class="dialogue-line dl-carol"><span class="speaker sp-carol">Carol:</span> Creo que los efectos especiales son increíbles y hacen la historia más emocionante.</div>
+                    <div class="dialogue-line dl-lucas"><span class="speaker sp-lucas">Lucas:</span> ¿Te gusta esta banda?</div>
+                    <div class="dialogue-line dl-carol"><span class="speaker sp-carol">Carol:</span> Sí, pienso que es un grupo muy talentoso y sus canciones son muy buenas.</div>
+                    <div class="dialogue-line dl-lucas"><span class="speaker sp-lucas">Lucas:</span> ¿Qué opinas de esta canción?</div>
+                    <div class="dialogue-line dl-carol"><span class="speaker sp-carol">Carol:</span> En mi opinión, el ritmo es muy bueno y la letra es muy interesante.</div>
+                    <div class="dialogue-line dl-lucas"><span class="speaker sp-lucas">Lucas:</span> ¿Te gusta ir a conciertos?</div>
+                    <div class="dialogue-line dl-carol"><span class="speaker sp-carol">Carol:</span> Sí, para mí los conciertos son muy divertidos porque puedes escuchar música en vivo.</div>
+                    <div class="dialogue-line dl-lucas"><span class="speaker sp-lucas">Lucas:</span> ¿Te gusta el nuevo álbum de ese cantante?</div>
+                    <div class="dialogue-line dl-carol"><span class="speaker sp-carol">Carol:</span> Sí, para mí es un álbum muy bueno y tiene canciones muy bonitas.</div>
+            </div>
+            <button class="btn-play-block" data-block="dialogue1" aria-label="Ouvir diálogo">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span>Ouvir</span>
+            </button>
+        </div>
+		</div>
+    </section>
+	
+	<section class="lesson-section" id="section-audio5" data-section="audio5">
+        <h2 class="section-title-lesson">Textos para lectura 📕</h2>
+
+        <div class="audio-block" data-block-id="audio5">
+            <div class="audio-block-label">Áudio 05: El cine y la música en la cultura latinoamericana 🎬</div>
+            <div class="audio-block-content">
+			  <p>El cine latinoamericano tiene una historia rica y diversa. Desde los años 50, países como México, Argentina y Brasil comenzaron a producir películas que mostraban la vida cotidiana y los problemas sociales. Argentina, por ejemplo, se convirtió en un centro importante con directores como Juan José Campanella, que ganó el Óscar con El secreto de sus ojos. Brasil también se destacó con Cidade de Deus, una película que retrata la violencia en las favelas y que fue nominada al Óscar. México, con Amores Perros, de Alejandro González Iñárritu, abrió las puertas a una nueva generación de cineastas reconocidos en todo el mundo.</p>
+			  <p>En los últimos años, Chile ha tenido un papel muy importante en el cine internacional. Una mujer ganó el Óscar en 2018 y mostró la lucha por la identidad y los derechos humanos. Colombia también ha producido películas importantes, como El abrazo de la serpiente, que fue nominada al Óscar y mostró la relación entre culturas indígenas y el mundo moderno.</p>
+			  <p>El estilo del cine latinoamericano es muy particular: mezcla realismo, crítica social y emoción. Muchas películas hablan de desigualdad, política, amor y memoria histórica. No son solo entretenimiento, sino también una forma de reflexión sobre la vida en la región.</p>
+			  <p>La música acompaña este movimiento cultural. Shakira, Maluma y Bad Bunny son artistas que han llevado la música latina a todo el mundo. Shakira mezcla pop con ritmos colombianos, Maluma representa el reguetón moderno y Bad Bunny ha revolucionado la música urbana con letras que hablan de juventud y sociedad. Además, artistas como Mercedes Sosa y Rubén Blades marcaron épocas anteriores con canciones de protesta y esperanza.</p>
+			  <p>Hoy, cine y música se unen para mostrar la identidad de América Latina. Son expresiones que hablan de la diversidad, la pasión y la memoria de sus pueblos.</p>
+            </div>
+            <button class="btn-play-block" data-block="audio5" aria-label="Ouvir texto">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Ouvir</span>
+            </button>
+        </div>
+    </section>
+	
+	<section class="lesson-section" id="section-audio6" data-section="audio6">
+        <div class="audio-block" data-block-id="audio6">
+            <div class="audio-block-label">Áudio 06: Una película, una canción y muchos recuerdos</div>
+            <div class="audio-block-content">
+			  <p>Recuerdo una tarde tranquila en casa. En la televisión pasaban una película argentina, de esas que hablan de amor y justicia. Al mismo tiempo, en la radio sonaba una canción de Shakira. La mezcla fue mágica: imágenes y sonidos que despertaron recuerdos escondidos.</p>
+			  <p>La película mostraba personajes simples, pero llenos de emociones. La canción tenía un ritmo alegre, que me llevó a pensar en fiestas con amigos y en momentos de juventud. Juntos, cine y música me hicieron viajar en el tiempo. Recordé la casa de mi abuela, los paseos por la ciudad y los primeros amores que nunca se olvidan.</p>
+			  <p>Más tarde, otra canción de Maluma sonó en la radio. Era moderna, diferente, pero también me hizo pensar en cómo la música cambia con el tiempo y cómo cada generación tiene su propio ritmo. Igual que el cine: las películas nuevas hablan de temas actuales, pero siempre con un toque humano que conecta con el pasado.</p>
+			  <p>Entendí que una película y una canción no son solo arte. Son llaves que abren la memoria. Nos recuerdan quiénes fuimos y nos ayudan a entender quiénes somos hoy. En cada melodía y en cada escena, hay un pedazo de nuestra historia personal y colectiva.</p>
+            </div>
+            <button class="btn-play-block" data-block="audio6" aria-label="Ouvir texto">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Ouvir</span>
+            </button>
+        </div>
+    </section>
+
+	<div class="lesson-objectives">
+	  <p> <span>Gramática 📙</span> </p>
+	  <p><span><br>
+	    </span></p>
+<h3>Hablando de gustos y preferencias</h3>
+          <ul>
+			  <li><strong>Cuando hablamos de cine, música y cultura, usamos algunas expresiones para decir lo que nos gusta o lo que pensamos:</strong></li>
+			  <li>&nbsp;</li>
+			  <p><strong>1. Hablar de gustos</strong></p>
+			  <p><strong>Usamos estos verbos para decir nuestras preferencias.</strong></p>
+			  <p>&nbsp;</p>
+              <p>Me gusta / Me gustan:</p>
+			  <p>Me gusta ver películas en el cine.</p>
+			  <p>Me gustan las películas de comedia.</p>
+			  <p>&nbsp;</p>
+			  <p>Me encanta / Me encantan:</p>
+			  <p>Me encanta esta canción.</p>
+			  <p>Me encantan los conciertos en vivo.</p>
+			  <p>&nbsp;</p>
+			  <p>Prefiero:</p>
+			  <p>Prefiero escuchar música en casa.</p>
+		    <p>Prefiero las películas de acción.</p>
+		    <p>&nbsp;</p>
+		    <p>&nbsp;</p>
+			<p><strong>2. Expresar opinión</strong></p>
+			<p><strong>Estas expresiones ayudan a decir lo que pensamos.</strong></p>
+			<p>&nbsp;</p>
+			  <p>Creo que: Creo que esta película es muy interesante.</p>
+<p>Pienso que: Pienso que la música es muy importante en las películas.</p>
+			  <p>En mi opinión: En mi opinión, el cine latinoamericano es muy creativo.</p>
+		    <p>Para mí: Para mí, la música hace una película más emocionante.</p>
+		    <p>&nbsp;</p>
+		    <p>&nbsp;</p>
+			  <p><strong>3. Comparar gustos</strong></p>
+		    <p><strong>También podemos comparar nuestras preferencias.</strong></p>
+			  <p>&nbsp;</p>
+			  <p>más… que: Me gusta más el cine que el teatro.</p>
+			  <p>menos… que: Me gustan menos las películas de terror que las comedias.</p>
+			  <p>tan… como: Esta canción es tan famosa como la otra.</p>
+          </ul>
+      </div>
+		
+<div class="lesson-objectives">
+<h3>Prefiero … </h3>
+      <ul>
+		  <li><strong>Usamos <em>“prefiero… a…”</em> para comparar dos opciones y decir que nos gusta una más que otra:</strong></li>
+		  <li>&nbsp;</li>
+		  <p><strong>Estructura</strong></p>
+		  <p><strong><em>prefiero</em>&nbsp; &nbsp; &nbsp;+&nbsp; &nbsp; &nbsp;opción 1&nbsp; &nbsp; &nbsp;+&nbsp; &nbsp; <em>&nbsp;a</em>&nbsp; &nbsp; &nbsp;+&nbsp; &nbsp; &nbsp;opción 2</strong></p>
+		  <p>&nbsp;</p>
+		  <p>Cuando aparece <em>“a + el”</em>, usamos la contracción <em>“al”</em>:</p>
+		  <p>Prefiero las películas de acción a las comedias.</p>
+		  <p>Prefiero el cine al streaming en casa.</p>
+		  <p>Prefiero el rock al pop.</p>
+		  		  <p>&nbsp;</p>
+		  <p><em>"prefiero"</em> + sustantivo + <em>"a"</em> + sustantivo</p>
+		  <p>Prefiero el café al té.</p>
+		  <p>&nbsp;</p>
+<p><em>"prefiero"</em> + infinitivo + <em>"a"</em> + infinitivo</p>
+	    <p>Prefiero leer a ver televisión.</p>
+		  <p>&nbsp;</p>
+		  <p><em>"prefiero"</em> + infinitivo + <em>"antes que"</em> + infinitivo</p>
+		  <p>Prefiero caminar antes que tomar el autobús.</p>
+      </ul>
+  </div>
+	<div>
+	  <p>&nbsp;</p>
+	  <p>&nbsp;</p>
+    </div>
+  <section class="lesson-section" id="section-grammar2" data-section="grammar2">
+        <div class="section-label">
+            <span>Práctica Guiada 🗣️💬👤</span>
+        </div>
+        <h2 class="section-title-lesson">Parte 1: Lee las situaciones y responde las preguntas con frases completas.</h2>
+
+   
+	  <div class="audio-block" data-block-id="sit1">
+            <div class="audio-block-label">Situación 1: Spoilers de películas</div>
+            <div class="audio-block-content">
+                <div class="examples-list">
+					<p>Sofía vio una película muy interesante ayer. Hoy quiere contar la historia a su amigo Marcos.</p>
+					<p>Pero Marcos todavía no vio la película y no quiere saber el final. Sofía piensa que no es un problema contar algunos detalles, pero Marcos dice que eso es spoiler.</p>
+                  <div class="example-item hoverable" data-speak="¿Crees que los spoilers son un problema?"><strong>¿Crees que los spoilers son un problema?</strong></div>
+                    <div class="example-item hoverable" data-speak="¿Te molesta cuando alguien cuenta el final de una película?"><strong>¿Te molesta cuando alguien cuenta el final de una película?</strong></div>
+                    <div class="example-item hoverable" data-speak="¿Qué haces cuando alguien empieza a contar spoilers?"><strong>¿Qué haces cuando alguien empieza a contar spoilers?</strong></div>
+                </div>
+            </div>
+        </div>
+	  
+	   <div class="audio-block" data-block-id="sit2">
+            <div class="audio-block-label">Situación 2: Música muy alta</div>
+            <div class="audio-block-content">
+                <div class="examples-list">
+					<p>Luis está escuchando música en su habitación. A él le gusta escuchar música con el volumen muy alto porque disfruta más el ritmo. Pero su hermana Carla está estudiando y no puede concentrarse. Ella le pide que baje el volumen.</p>
+                  <div class="example-item hoverable" data-speak="¿Te gusta escuchar música con volumen alto o bajo?"><strong>¿Te gusta escuchar música con volumen alto o bajo?</strong></div>
+                    <div class="example-item hoverable" data-speak="¿La música puede molestar a otras personas?"><strong>¿La música puede molestar a otras personas?</strong></div>
+                    <div class="example-item hoverable" data-speak="¿Qué haces cuando necesitas silencio para estudiar?"><strong>¿Qué haces cuando necesitas silencio para estudiar?</strong></div>
+                </div>
+            </div>
+        </div>
+
+	  	   <div class="audio-block" data-block-id="sit3">
+            <div class="audio-block-label">Situación 3: Películas largas</div>
+            <div class="audio-block-content">
+                <div class="examples-list">
+					<p>A muchos directores les gusta hacer películas largas, de dos o tres horas. Algunas personas piensan que las películas largas son más interesantes porque cuentan mejor la historia. Pero otras personas prefieren películas más cortas porque no tienen mucho tiempo.</p>
+                  <div class="example-item hoverable" data-speak="¿Prefieres películas largas o cortas?"><strong>¿Prefieres películas largas o cortas?</strong></div>
+                    <div class="example-item hoverable" data-speak="¿Cuál es la película más larga que viste?"><strong>¿Cuál es la película más larga que viste?</strong></div>
+                    <div class="example-item hoverable" data-speak="¿Crees que una película larga siempre es mejor?"><strong>¿Crees que una película larga siempre es mejor?</strong></div>
+                </div>
+            </div>
+        </div>
+
+	  <div class="audio-block" data-block-id="sit4">
+            <div class="audio-block-label">Situación 4: Gustos musicales diferentes</div>
+            <div class="audio-block-content">
+                <div class="examples-list">
+					<p>Ana y Diego son amigos, pero tienen gustos musicales muy diferentes. Ana escucha música pop y música latina. Diego prefiere rock y música alternativa. Cuando viajan juntos en el coche, no saben qué música escuchar.</p>
+                  <div class="example-item hoverable" data-speak="¿Te gusta escuchar música con tus amigos?"><strong>¿Te gusta escuchar música con tus amigos?</strong></div>
+                    <div class="example-item hoverable" data-speak="¿Qué haces cuando tienes gustos musicales diferentes?"><strong>¿Qué haces cuando tienes gustos musicales diferentes?</strong></div>
+                    <div class="example-item hoverable" data-speak="¿Crees que la música es importante en los viajes?"><strong>¿Crees que la música es importante en los viajes?</strong></div>
+                </div>
+            </div>
+        </div>
+	  
+	  <div class="audio-block" data-block-id="sit5">
+            <div class="audio-block-label">Situación 5: Ver películas solo o con amigos</div>
+            <div class="audio-block-content">
+                <div class="examples-list">
+					<p>A algunas personas les gusta ver películas solas porque pueden concentrarse mejor en la historia. Otras personas prefieren ver películas con amigos o con la familia porque es más divertido. Las dos opciones tienen ventajas. </p>
+                  <div class="example-item hoverable" data-speak="¿Prefieres ver películas solo o con otras personas?"><strong>¿Prefieres ver películas solo o con otras personas?</strong></div>
+                    <div class="example-item hoverable" data-speak="¿Con quién te gusta ver películas?"><strong>¿Con quién te gusta ver películas?</strong></div>
+                    <div class="example-item hoverable" data-speak="¿Qué tipo de películas te gusta ver con amigos?"><strong>¿Qué tipo de películas te gusta ver con amigos?</strong></div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section class="lesson-section" id="section-eje1" data-section="eje1">
+
+        <div class="audio-block" data-block-id="eje1">
+			<h2 class="section-title-lesson">Parte 2: Elige al menos 3 situaciones y opina sobre ellas respondiendo las preguntas. Graba un video de cada situación. Cada video debe durar al menos 1 minuto.</h2>
+		  <p>&nbsp;</p>
+<div class="audio-block-label">
+  <p>Intenta usar expresiones como:</p>
+</div>
+            <div class="audio-block-content">
+                <div class="examples-list">
+                  <div class="example-item hoverable" data-speak="en mi opinión">En mi opinión…</div>
+				  <div class="example-item hoverable" data-speak="creo que">Creo que…</div>
+					<div class="example-item hoverable" data-speak="para mí">Para mí…</div>
+                    <div class="example-item hoverable" data-speak="prefiero porque">Prefiero… porque…</div>
+					<div>
+					  <p>&nbsp;</p>
+					  <p><strong>¡No olvides enviar el vídeo a tu profesor para su corrección!</strong></p>
+                    </div>
+                </div>
+            </div>
+          <button class="btn-play-block" data-block="eje1" aria-label="Ouvir exemplos">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span>Ouvir</span>
+            </button>
+      </div>
+	</section>
+	
+	<section class="lesson-section" id="section-eje2" data-section="eje2">
+      <h2>Ejercicios 📝</h2>
+      <p>&nbsp;</p>
+		<h2  class="section-title-lesson">Opinión sobre cine y música.</h2>
+<div class="audio-block" data-block-id="eje2">
+  <div class="audio-block-label">
+    <p>Parte 01: Cine</p>
+  </div>
+  <div class="audio-block-content">
+    <div class="examples-list">
+      <div class="example-item hoverable" data-speak="¿Qué tipo de películas prefieres?">¿Qué tipo de películas prefieres?</div>
+      <div class="example-item hoverable" data-speak="¿Te gustan las películas de terror? ¿Por qué?">¿Te gustan las películas de terror? ¿Por qué?</div>
+      <div class="example-item hoverable" data-speak="¿Prefieres ver películas en casa o en el cine?">¿Prefieres ver películas en casa o en el cine?</div>
+      <div class="example-item hoverable" data-speak="¿Quién es tu actor o actriz favorito?">¿Quién es tu actor o actriz favorito?</div>
+      <div>
+	<div class="example-item hoverable" data-speak="¿Te gustan las películas con muchos efectos especiales?">¿Te gustan las películas con muchos efectos especiales?</div>
+      <div>
+        </div>
+      </div>
+    </div>
+</div>
+		</div>
+	<div class="audio-block" data-block-id="eje3">
+  <div class="audio-block-label">
+    <p>Parte 02: Música</p>
+  </div>
+  <div class="audio-block-content">
+    <div class="examples-list">
+      <div class="example-item hoverable" data-speak="¿Qué tipo de música escuchas normalmente?">¿Qué tipo de música escuchas normalmente?</div>
+      <div class="example-item hoverable" data-speak="¿Tienes un cantante o banda favorita?">¿Tienes un cantante o banda favorita?</div>
+      <div class="example-item hoverable" data-speak="¿Escuchas música cuando trabajas o estudias?">¿Escuchas música cuando trabajas o estudias?</div>
+      <div class="example-item hoverable" data-speak="¿Te gusta ir a conciertos?">¿Te gusta ir a conciertos?</div>
+      <div>
+	<div class="example-item hoverable" data-speak="¿Qué canción escuchas mucho últimamente?">¿Qué canción escuchas mucho últimamente?</div>
+      <div>
+        </div>
+      </div>
+    </div>
+</div>
+	  </div>
+	</section>
+	<section>
+	<div class="lesson-objectives">
+    <h3>Parte 03: Complete la frase:</h3>
+          <ul>
+              <p>Me gusta la música porque ...</p>
+			  <p>No me gustan las películas de terror porque ...</p>
+			  <p>Prefiero ver películas ...</p>
+			  <p>La música es importante porque ...</p>
+      </ul>
+      </div>
+</section>		
+		<div>
+		  <p>&nbsp;</p>
+		  <p>&nbsp;</p>
+		</div>
+		
+	<div class="lesson-objectives">
+    <h3>Elige un tema (Cine/Música) y habla durante 1–2 minutos sobre tu opinión.</h3>
+          <p><strong>Intenta usar expresiones como:</strong></p>
+      <p>&nbsp;</p>
+		<p>En mi opinión…</p>
+		<p>Creo que…</p>
+		<p>Creo que…</p>
+		<p>Prefiero… porque…</p>
+	  <p>&nbsp;</p>
+		<p><strong>¡No olvides enviar el vídeo a tu profesor para su corrección!</strong></p>
+  </div>
+<!-- (END OF LESSON) -->
+    <div class="lesson-end-block">
+        <div class="lesson-end-icon">🎉</div>
+        <h2>Bueno, ¡eso es todo por hoy!</h2>
+        <p>¡Nos vemos en la próxima clase! ¡Sigue practicando!</p>
+    </div>
+
+</main>
+
+<script src="aula.js"></script>
+</body>
+</html>
